@@ -1,0 +1,237 @@
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --border: #e2e5ea;
+  --text: #1c1f26;
+  --text-muted: #6b7280;
+  --accent: #2d6cdf;
+  --accent-hover: #1e56c0;
+  --terminal: #1a8a4a;
+  --terminal-bg: #eafaf0;
+  --tag-bg: #eef1f6;
+  --tag-text: #4b5563;
+  --warn-bg: #fff4e5;
+  --warn-text: #9a5b00;
+  --radius: 10px;
+  --shadow: 0 1px 3px rgba(16, 24, 40, 0.06), 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.page-header h1 {
+  font-size: 1.5rem;
+  margin: 0 0 4px;
+}
+
+.page-header p {
+  color: var(--text-muted);
+  margin: 0 0 28px;
+  font-size: 0.925rem;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.breadcrumb button {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+.breadcrumb button:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .sep {
+  color: var(--border);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.card.terminal {
+  border-color: var(--terminal);
+  background: var(--terminal-bg);
+}
+
+.node-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.card.terminal .node-title {
+  color: var(--terminal);
+}
+
+.node-body {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0 0 14px;
+  white-space: pre-line;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.tag {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.tag.warn {
+  background: var(--warn-bg);
+  color: var(--warn-text);
+}
+
+.node-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+.node-link:hover {
+  border-color: var(--accent);
+}
+
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin: 0 0 6px;
+}
+
+.warning-box {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  background: var(--warn-bg);
+  border: 1px solid #f0c674;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+}
+
+.warning-box p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--warn-text);
+  line-height: 1.4;
+}
+
+.warning-icon {
+  flex-shrink: 0;
+}
+
+.checklist,
+.notion-topics {
+  margin-bottom: 16px;
+}
+
+.checklist ul,
+.notion-topics ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 4px;
+}
+
+.checklist li {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.notion-topics li {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--accent);
+}
+
+.options {
+  display: grid;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.option-btn {
+  text-align: left;
+  background: #fafbfc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease;
+}
+
+.option-btn:hover {
+  border-color: var(--accent);
+  background: #f0f5ff;
+}
+
+.restart-btn {
+  margin-top: 24px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.restart-btn:hover {
+  border-color: var(--text-muted);
+  color: var(--text);
+}
